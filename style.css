@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --dark-blue: hsl(224, 21%, 14%);
+}
+button{
+    font-family: inherit;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-family: inherit;
+    color:inherit;
+    cursor: pointer;
+}
+@font-face{
+    font-family: PlusJakartaExtraBold;
+    src: url('assets/fonts/static/PlusJakartaSans-ExtraBold.ttf');
+}
+@font-face{
+    font-family: PlusJakartaMedium;
+    src: url('assets/fonts/static/PlusJakartaSans-Medium.ttf');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--light-grayish-blue);
+    font-family:PlusJakartaMedium,sans-serif ;
+}
+main{
+    background-color: var(--white);
+    margin-top:2rem;
+    border-radius: 30px;
+    padding:1.4rem 0.9rem;
+    max-width:720px;
+    font-size: 1rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    margin:0.9rem 0;
+}
+h1{
+    font-size: 1.5rem;
+    font-family:PlusJakartaExtraBold,sans-serif ;
+}
+.Notification-count{
+    background-color: var(--blue);
+    padding: 0rem 0.6rem;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-right: auto;
+    margin-left: 0.5em;
+}
+.btn{
+    background-color: transparent;
+    border: 0;
+}
+.message{
+    padding: 1em;
+    display: flex;
+    gap:1em;
+    margin:1em 0;
+
+}
+.message.active{
+    background-color: var(--light-grayish-blue);
+    border-radius: 10px;
+}
+.message-content{
+    width:100%;
+}
+.message img{
+    width:50px;
+    height:50px;
+    cursor: pointer;
+    transition:transform 150ms ease-in;
+}
+.message img:hover{
+    border-radius: 50%;
+    outline-offset: 2px;
+    outline:0.1rem solid var(--dark-grayish-blue);
+    transform: scale(1.09);
+}
+.message .user-sharedImage img:hover{
+    border-radius: 5px;
+}
+.message p{
+    color:var(--grayish-blue);
+}
+.message p ~ p{
+    margin:0.25em 0;
+}
+.message .user-name{
+    color: var(--dark-blue);
+    font-family:PlusJakartaExtraBold,sans-serif;
+    margin-right: 0.3em;
+}
+.message .user-name:hover,
+.message .user-activity:hover{
+    color:var(--blue);
+}
+.user-activity{
+    color:var(--dark-grayish-blue);
+    font-family:PlusJakartaExtraBold,sans-serif;
+    margin-left: 0.3em;
+}
+.message .user-privateMessage{
+    padding: 1em 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--white);
+    border:0.7px solid var(--light-grayish-blue-2);
+    transition: 150ms ease-in-out;
+    margin-top: 1em;
+}
+.user-privateMessage:hover{
+    background-color: var(--light-grayish-blue-1);
+}
+@media (min-width:750px){
+    main{
+        padding:2rem;
+    }
+}   
