@@ -8,8 +8,8 @@
   
   <title>Frontend Mentor | Notifications page</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link rel="stylesheet" href="style.css">
+
 <script src="script.js" defer></script>
 </head>
 <body>
@@ -54,7 +54,7 @@
         </p>
       </div>
     </div>
-    <div class="message">
+    <div class="message" data-aos="fade-up">
       <img src="assets/images/avatar-kimberly-smith.webp" alt="user profile image">
       <div class="message-content">
         <p><a class="user-name">Kimberly Smith</a> commented on your picture</p>
@@ -64,14 +64,14 @@
         <img src="assets/images/image-chess.webp" alt="user shared image">
       </div>
     </div>
-    <div class="message">
+    <div class="message" data-aos="fade-up"  data-aos-delay="300" >
       <img src="assets/images/avatar-nathan-peterson.webp" alt="user profile image">
       <div class="message-content">
         <p><a class="user-name">Nathan Peterson</a> reacted to your recent post <a  class="user-activity"> 5 end-game strategies to increase your win rate</a></p>
         <p>2 week ago</p>
       </div>
     </div>
-    <div class="message">
+    <div class="message" data-aos="fade-up"  data-aos-delay="500">
       <img src="assets/images/avatar-anna-kim.webp" alt="user profile image">
       <div class="message-content">
         <p><a class="user-name">Anna Kim</a>left the group <a  class="user-activity">Chess Club</a></p>
@@ -84,6 +84,13 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">SG</a>.
   </footer>
-  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 50, 
+        delay: 0,
+        duration: 1000
+      });
+  </script>
 </body>
 </html>
