@@ -144,6 +144,9 @@ h1{
 .user-privateMessage:hover{
     background-color: var(--light-grayish-blue-1);
 }
+footer{
+    padding:1rem;
+}
 @media (min-width:750px){
     main{
         padding:2rem;
