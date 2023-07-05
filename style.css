@@ -81,9 +81,21 @@ h1{
 .message.active{
     background-color: var(--light-grayish-blue);
     border-radius: 10px;
+    
+}
+.message.active .message-content > p:first-of-type::after{
+    content:'';
+    width:8px;
+    height:8px;
+    border-radius: 50%;
+    background-color:var(--red);
+    position: absolute;
+    margin-left: 0.4em;
+    margin-top:0.5em;
 }
 .message-content{
     width:100%;
+    position: relative;
 }
 .message img{
     width:50px;
@@ -137,3 +149,7 @@ h1{
         padding:2rem;
     }
 }   
+::-webkit-scrollbar {
+    width: 0;  
+    background: transparent; 
+}

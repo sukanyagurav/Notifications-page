@@ -12,8 +12,8 @@ function decreaseCount(){
 }
 newMessage.forEach(message=>{
     message.addEventListener('click',function(e){
-        if(!message.classList.contains('.active') && pendingNotification!==0){
-            message.classList.remove('active')
+        if(e.target.parentNode.closest('.message.active')){
+            e.target.parentNode.closest('.message').classList.remove('active')
             decreaseCount()
         }
     })
